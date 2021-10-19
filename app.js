@@ -26,12 +26,24 @@
 
 // generator example, the * tells JS that this is a generator, not just a function
 
-function* sayNames(){
-    yield 'Jack', 
-    yield 'Jill', 
-    yield 'John'
+// function* sayNames(){
+//     yield 'Jack', 
+//     yield 'Jill', 
+//     yield 'John'
+// }
+
+// const names = sayNames()
+
+// console.log(names.next())
+
+// ID creator 
+
+function* createIDs(){
+    let index = 1
+
+    while(true) {
+        yield index++
+    }
 }
 
-const names = sayNames()
-
-console.log(names.next())
+const generate = createIDs()
