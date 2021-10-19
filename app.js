@@ -1,6 +1,6 @@
 // defining an iterator example
 
-function nameIterator(names){
+function nameIterator(namesInArray){
     let nextIndex = 0
 
     return{
@@ -8,7 +8,18 @@ function nameIterator(names){
             // returning based on a conditional
             // if nextIndex is less than the length of names, then an object with a value of names index plus 1, with a done value of false (meaning there is more to iterate through) is returned
             // else an object of done:true is returned meaning the iterator is complete
-            return nextIndex < names.length ? {value: names[nextIndex++], done: false} : { done: true}
+            return nextIndex < namesInArray.length ? {value: namesInArray[nextIndex++], done: false} : { done: true}
         }
     }
 }
+
+// creating an array of names 
+const arrayOfNames = ['Jack', 'Jill', 'John']
+// initializing iterator and passing in namesArray into it
+
+const names = nameIterator(arrayOfNames)
+
+console.log(names.next())
+console.log(names.next())
+console.log(names.next())
+console.log(names.next())
