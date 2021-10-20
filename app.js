@@ -1,4 +1,4 @@
-// defining an iterator example
+// defining an iterator example.
 
 // function nameIterator(namesInArray){
 //     let nextIndex = 0
@@ -29,8 +29,6 @@
 // function* sayNames(){
 //     yield 'Jack', 
 //     yield 'Jill', 
-//     yield 'John'
-// }
 
 // const names = sayNames()
 
